@@ -1,0 +1,29 @@
+<div class="chat">
+        <div class="messages">
+            <div class="inner" id="scroll" #scrollMe>
+                <div class="container">
+                    <div class="fullMessage" *ngFor="let message of messages">
+                        <div class="info">
+                            <p>{{ message.username}} <br class="newLine"><span>{{ message.date.toDate().toLocaleDateString("en-US", { hour: '2-digit', minute: '2-digit', year: 'numeric', month: 'long', day: 'numeric' }) }}</span></p>
+                        </div>
+                        <div class="messageBox">
+                            <p class="message">{{ message.message}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="newMessage">
+            <div class="container">
+                <input
+                    type="text"
+                    name="message"
+                    placeholder="type new message"
+                    [(ngModel)]="message.message"
+                    #messageInput="ngModel"
+                    required
+                >
+                <button (click)="sendMessage()" [ngClass]="{valid: !messageInput.invalid}">Send</button>
+            </div>
+        </div>
+</div>

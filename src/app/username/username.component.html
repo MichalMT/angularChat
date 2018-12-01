@@ -1,0 +1,18 @@
+<div class="username">
+    <form (ngSubmit)="submitUsername(usernameForm)" #usernameForm="ngForm">
+        <input
+            type="text"
+            name="username"
+            placeholder="Choose a username"
+            ngModel
+            required
+            autocomplete="off"
+            #usernameInput="ngModel"
+        >
+        <input
+            type="submit"
+            value="CONTINUE"
+            [ngClass]="{invalid: usernameInput.invalid}"
+        >
+    </form>
+</div>

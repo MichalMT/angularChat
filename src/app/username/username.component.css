@@ -1,0 +1,53 @@
+
+.username{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url('../../assets/bg1.jpg');
+    background-position: center center;
+}
+.username input[type='text']{
+    display: block;
+    width: 300px;
+    height: 50px;
+    background: white;
+    border: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.username input[type='submit'] {
+    display: block;
+    width: 300px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    background-color: blue;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom-left-radius: 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+.username input[type='text'].ng-invalid.ng-touched {
+  border: solid 1px red;
+}
+.username input[type='submit'].invalid {
+  opacity: .5
+}
